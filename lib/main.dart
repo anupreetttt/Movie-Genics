@@ -57,9 +57,7 @@ class _homeScreenState extends State<homeScreen> {
             ),
           ),
           genreAction(),
-          genreAction(),
 
-          genreAction(),
 
         ],
       )
