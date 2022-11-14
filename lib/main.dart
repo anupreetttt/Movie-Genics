@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:moviegenics/Categories/comedyGenre.dart';
+import 'package:moviegenics/Categories/horrorGenre.dart';
 
 import 'Categories/actionGenre.dart';
 
@@ -38,8 +40,9 @@ class _homeScreenState extends State<homeScreen> {
       body: CustomScrollView(
         slivers: <Widget>[
            SliverAppBar(
-            backgroundColor: Colors.red,
+            backgroundColor: Colors.black,
             expandedHeight: 200,
+            pinned: true,
             flexibleSpace: FlexibleSpaceBar(
               centerTitle: true,
               background: Image.asset(
@@ -56,13 +59,46 @@ class _homeScreenState extends State<homeScreen> {
               ),
             ),
           ),
-          genreAction(),
+
+          buildSliverAppbar('Action', Colors.black, Colors.white),
+          //SliverToBoxAdapter(child: genreAction(index_value: 0,),),
+          genreAction(index_value: 0),
+
+          buildSliverAppbar('Comedy', Colors.white, Colors.black),
+          // genreHorror(),
+          genreComedy(),
+
+          buildSliverAppbar('Action', Colors.black, Colors.white),
+          // genreHorror(),
+
+
+          buildSliverAppbar('Action', Colors.black, Colors.white),
+          // genreAction(),
+
 
 
         ],
       )
     );
   }
+  Widget buildSliverAppbar(String tittle, Color barColor, Color backgroundColor) => SliverAppBar(
+    backgroundColor: backgroundColor,
+    toolbarHeight: 40,
+    expandedHeight: 60,
+    collapsedHeight: 40,
+    pinned: true,
+    flexibleSpace: FlexibleSpaceBar(
+      centerTitle: true,
+      title: Text(tittle,
+        style: TextStyle(
+          fontSize: 18,
+          fontStyle: FontStyle.italic,
+          color: barColor,
+          // backgroundColor: Colors.teal.withOpacity(0.7)
+        ),
+      ),
+    ),
+  );
 }
 
 
