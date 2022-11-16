@@ -7,6 +7,7 @@ class genrecomedy extends StatefulWidget {
   // const genrecomedy({Key? key}) : super(key: key);
   const genrecomedy({Key? key, required this.index_value}) : super(key:key);
   final int index_value;
+
   @override
   State<genrecomedy> createState() => _genrecomedyState();
 }
