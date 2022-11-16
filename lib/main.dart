@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:moviegenics/Categories/comedyGenre.dart';
 import 'package:moviegenics/Categories/horrorGenre.dart';
+import 'package:moviegenics/Categories/romanceGenre.dart';
+import 'package:moviegenics/Categories/scifiGenre.dart';
 
 import 'Categories/actionGenre.dart';
 
@@ -65,17 +67,16 @@ class _homeScreenState extends State<homeScreen> {
           genreAction(index_value: 0),
 
           buildSliverAppbar('Comedy', Colors.white, Colors.black),
-          // genreHorror(),
-          genreComedy(),
+          genrecomedy(index_value: 0,),
 
-          buildSliverAppbar('Action', Colors.black, Colors.white),
-          // genreHorror(),
+          buildSliverAppbar('Horror', Colors.black, Colors.white),
+          genrehorror(index_value: 0),
 
+          buildSliverAppbar('Romance', Colors.white, Colors.black),
+         genreromance(index_value: 0),
 
-          buildSliverAppbar('Action', Colors.black, Colors.white),
-          // genreAction(),
-
-
+          buildSliverAppbar('Science fiction', Colors.black, Colors.white),
+          genrescifi(index_value: 0)
 
         ],
       )

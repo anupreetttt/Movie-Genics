@@ -1,17 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:moviegenics/Data/horrorData.dart';
-import 'package:moviegenics/DeatiledPages/horrorDetails.dart';
+import 'package:moviegenics/Data/scifiData.dart';
+import 'package:moviegenics/DeatiledPages/scifiDetails.dart';
 
-class genrehorror extends StatefulWidget {
-  // const genrehorror({Key? key}) : super(key: key);
-  const genrehorror({Key? key, required this.index_value}) : super(key:key);
+class genrescifi extends StatefulWidget {
+  // const genrescifi({Key? key}) : super(key: key);
+  const genrescifi({Key? key, required this.index_value}) : super(key:key);
   final int index_value;
   @override
-  State<genrehorror> createState() => _genrehorrorState();
+  State<genrescifi> createState() => _genrescifiState();
 }
 
-class _genrehorrorState extends State<genrehorror> {
+class _genrescifiState extends State<genrescifi> {
 
   // var index = 0;
   // void _getIndex() {
@@ -29,7 +29,7 @@ class _genrehorrorState extends State<genrehorror> {
 }
 
 int index = 0;
-// horrorDetails horror_details = horrorDetails();
+// scifiDetails scifi_details = scifiDetails();
 
 Widget buildCards(BuildContext context) => Container(
   height: 200,
@@ -48,17 +48,17 @@ Widget buildCards(BuildContext context) => Container(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Image.network(horrorList[index].imgUrls, width: 110, height: 100,),
+                Image.network(scifiList[index].imgUrls, width: 110, height: 100,),
                 Padding(
                   padding: EdgeInsets.all(10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(horrorList[index].movie_name, style: const TextStyle(fontSize: 20
+                      Text(scifiList[index].movie_name, style: const TextStyle(fontSize: 20
                       ),
                       ),
-                      Text(horrorList[index].director_name, style: TextStyle(fontSize: 16),)
+                      Text(scifiList[index].director_name, style: TextStyle(fontSize: 16),)
                     ],
                   ),
                 )
@@ -66,7 +66,7 @@ Widget buildCards(BuildContext context) => Container(
             ),
           ),
           onTap: () =>
-              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>horrorDetails(index_value: index))),
+              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>scifiDetails(index_value: index))),
           onTapDown: (position){
             _getTappedPosition(position);
           },
@@ -87,18 +87,18 @@ Widget buildCards(BuildContext context) => Container(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Image.network(horrorList[index+1].imgUrls, width: 110, height: 100,),
+                Image.network(scifiList[index+1].imgUrls, width: 110, height: 100,),
                 Padding(
                   padding: EdgeInsets.all(10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(horrorList[index+1].movie_name, style: const TextStyle(
+                      Text(scifiList[index+1].movie_name, style: const TextStyle(
                           fontWeight: FontWeight.bold, fontSize: 20
                       ),
                       ),
-                      Text(horrorList[index+1].director_name, style: TextStyle(fontSize: 16),)
+                      Text(scifiList[index+1].director_name, style: TextStyle(fontSize: 16),)
                     ],
                   ),
                 )
@@ -106,7 +106,7 @@ Widget buildCards(BuildContext context) => Container(
             ),
           ),
           onTap: () =>
-              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>horrorDetails(index_value: index+1))),
+              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>scifiDetails(index_value: index+1))),
 
         ),
 
@@ -123,18 +123,18 @@ Widget buildCards(BuildContext context) => Container(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Image.network(horrorList[index+2].imgUrls, width: 110, height: 100,),
+                Image.network(scifiList[index+2].imgUrls, width: 110, height: 100,),
                 Padding(
                   padding: EdgeInsets.all(10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(horrorList[index+2].movie_name, style: const TextStyle(
+                      Text(scifiList[index+2].movie_name, style: const TextStyle(
                           fontWeight: FontWeight.bold, fontSize: 20
                       ),
                       ),
-                      Text(horrorList[index+2].director_name, style: TextStyle(fontSize: 16),)
+                      Text(scifiList[index+2].director_name, style: TextStyle(fontSize: 16),)
                     ],
                   ),
                 )
@@ -142,7 +142,7 @@ Widget buildCards(BuildContext context) => Container(
             ),
           ),
           onTap: () =>
-              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>horrorDetails(index_value: index+2))),
+              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>scifiDetails(index_value: index+2))),
         ),
       )
     ],
@@ -154,7 +154,7 @@ void _getTappedPosition(TapDownDetails position) {
 
 // void passData() {
 //   for(var i = 0; i < 5; i++){
-//     print(horrorList[i].movie_name);
+//     print(scifiList[i].movie_name);
 //   }
 // }
 

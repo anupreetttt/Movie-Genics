@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:moviegenics/Data/comedyData.dart';
 import 'package:moviegenics/DeatiledPages/comedyDetails.dart';
 
-class genreComedy extends StatefulWidget {
-  const genreComedy({Key? key}) : super(key: key);
-
+class genrecomedy extends StatefulWidget {
+  // const genrecomedy({Key? key}) : super(key: key);
+  const genrecomedy({Key? key, required this.index_value}) : super(key:key);
+  final int index_value;
   @override
-  State<genreComedy> createState() => _genreComedyState();
+  State<genrecomedy> createState() => _genrecomedyState();
 }
 
-class _genreComedyState extends State<genreComedy> {
-
+class _genrecomedyState extends State<genrecomedy> {
 
   // var index = 0;
   // void _getIndex() {
@@ -22,23 +22,17 @@ class _genreComedyState extends State<genreComedy> {
 
   @override
   Widget build(BuildContext context) {
-    var index = 0;
     return SliverToBoxAdapter(
         child: buildCards(context)
     );
   }
 }
+
 int index = 0;
-
-comedyData comData = comedyList[index];
-comedyData comData1 = comedyList[index+1];
-comedyData comData2 = comedyList[index+2];
-comedyData comData3 = comedyList[index+3];
-comedyData comData4 = comedyList[index+4];
-
+// comedyDetails comedy_details = comedyDetails();
 
 Widget buildCards(BuildContext context) => Container(
-  height: 200,
+  height: 250,
   child: ListView(
     scrollDirection: Axis.horizontal,
     children: [
@@ -54,7 +48,7 @@ Widget buildCards(BuildContext context) => Container(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Image.network(comedyList[index].imgUrls, width: 110, height: 100,),
+                Image.network(comedyList[index].imgUrls, width: 110, height: 150,),
                 Padding(
                   padding: EdgeInsets.all(10),
                   child: Column(
@@ -72,7 +66,13 @@ Widget buildCards(BuildContext context) => Container(
             ),
           ),
           onTap: () =>
-              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>comedyDetails(comData))),
+              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>comedyDetails(index_value: index))),
+          onTapDown: (position){
+            _getTappedPosition(position);
+          },
+          onLongPress: () {
+
+          },
         ),
       ),
       Padding(padding: EdgeInsets.all(10),
@@ -87,7 +87,7 @@ Widget buildCards(BuildContext context) => Container(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Image.network(comedyList[index+1].imgUrls, width: 110, height: 100,),
+                Image.network(comedyList[index+1].imgUrls, width: 110, height: 150,),
                 Padding(
                   padding: EdgeInsets.all(10),
                   child: Column(
@@ -106,11 +106,13 @@ Widget buildCards(BuildContext context) => Container(
             ),
           ),
           onTap: () =>
-              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>comedyDetails(comData1))),
+              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>comedyDetails(index_value: index+1))),
+
         ),
+
       ),
       Padding(padding: EdgeInsets.all(10),
-        child: GestureDetector(
+        child: InkWell(
           child: Container(
             width: 300,
             decoration: BoxDecoration(
@@ -121,7 +123,7 @@ Widget buildCards(BuildContext context) => Container(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Image.network(comedyList[index+2].imgUrls, width: 110, height: 100,),
+                Image.network(comedyList[index+2].imgUrls, width: 110, height: 150,),
                 Padding(
                   padding: EdgeInsets.all(10),
                   child: Column(
@@ -140,9 +142,41 @@ Widget buildCards(BuildContext context) => Container(
             ),
           ),
           onTap: () =>
-              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>comedyDetails(comData2))),
+              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>comedyDetails(index_value: index+2))),
         ),
       )
     ],
   ),
 );
+
+void _getTappedPosition(TapDownDetails position) {
+}
+
+// void passData() {
+//   for(var i = 0; i < 5; i++){
+//     print(comedyList[i].movie_name);
+//   }
+// }
+
+
+//
+//
+// return SliverToBoxAdapter(
+// child: Padding(
+// padding: EdgeInsets.all(20.0),
+// child: ClipRRect(
+// borderRadius: BorderRadius.circular(20),
+// child: Container(
+// height: 200,
+// child: ListView(
+// scrollDirection: Axis.horizontal,
+// children: [
+// buildCards(),
+// buildCards()
+// // const SizedBox(width: 12,height: 12),
+// ],
+// ),
+// ),
+// ),
+// )
+// );

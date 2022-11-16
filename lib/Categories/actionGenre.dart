@@ -27,6 +27,7 @@ class _genreActionState extends State<genreAction> {
     );
   }
 }
+
 int index = 0;
 // actionDetails action_details = actionDetails();
 
@@ -66,6 +67,12 @@ child: ListView(
           ),
           onTap: () =>
               Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>actionDetails(index_value: index))),
+          onTapDown: (position){
+            _getTappedPosition(position);
+          },
+          onLongPress: () {
+
+          },
          ),
         ),
         Padding(padding: EdgeInsets.all(10),
@@ -100,7 +107,9 @@ child: ListView(
             ),
             onTap: () =>
                 Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>actionDetails(index_value: index+1))),
+
           ),
+
         ),
         Padding(padding: EdgeInsets.all(10),
           child: InkWell(
@@ -121,7 +130,7 @@ child: ListView(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text(actionList[index+2].movie_name, style: TextStyle(
+                        Text(actionList[index+2].movie_name, style: const TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20
                           ),
                         ),
@@ -139,6 +148,9 @@ child: ListView(
       ],
     ),
 );
+
+void _getTappedPosition(TapDownDetails position) {
+}
 
 // void passData() {
 //   for(var i = 0; i < 5; i++){

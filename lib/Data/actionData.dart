@@ -27,8 +27,7 @@ List<actionData> actionList = [
       wikiUrls: 'https://en.wikipedia.org/wiki/Top_Gun:_Maverick',
       imdbUrls: 'https://www.imdb.com/title/tt1745960/',
       movieRatings: 'IMDb rating: 8.4/10; Rotten tomatoes: 96%',
-      imgUrls:
-          'https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg'),
+      imgUrls: 'https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg'),
   actionData(
       movie_name: 'The Batman',
       director_name: 'Matt Reeves',

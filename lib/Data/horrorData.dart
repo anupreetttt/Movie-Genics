@@ -23,48 +23,38 @@ class horrorData {
 
 List<horrorData> horrorList = [
   horrorData(
-      movie_name: "Mr. Bean's Holiday",
-      director_name: 'Steve Bendelack',
-      movie_duration: '1h 30m',
-      wikiUrls: 'https://en.wikipedia.org/wiki/Mr._Bean%27s_Holiday',
-      imdbUrls: 'https://en.wikipedia.org/wiki/Mr._Bean%27s_Holiday',
-      movieRatings: 'IMDb rating: 76.4/10; Rotten tomatoes: 51%',
-      imgUrls: 'https://m.media-amazon.com/images/M/MV5BZjBhN2MzMjYtMzUzNi00MWM0LWJjNWUtYjJiYzZjYTQ3Mjg4XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg'
+      movie_name: "IT",
+      director_name: 'Andy Muschietti',
+      movie_duration: '2h 15m',
+      wikiUrls: 'https://en.wikipedia.org/wiki/It_(2017_film)',
+      imdbUrls: 'https://www.imdb.com/title/tt1396484/',
+      movieRatings: 'IMDb rating: 7.3/10; Rotten tomatoes: 86%',
+      imgUrls: 'https://upload.wikimedia.org/wikipedia/en/5/5a/It_%282017%29_poster.jpg'
   ),
   horrorData(
-      movie_name: '17 Again',
-      director_name: 'Burr Steers',
+      movie_name: 'Insidious',
+      director_name: 'James Wan',
       movie_duration: '1h 42m',
       wikiUrls: 'https://en.wikipedia.org/wiki/17_Again_(film)',
-      imdbUrls: 'https://www.imdb.com/title/tt0974661/',
+      imdbUrls: 'https://www.imdb.com/title/tt1591095/',
       movieRatings: 'IMDb rating: 6.4/10; Rotten tomatoes: 56%',
-      imgUrls: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/17again.jpg/220px-17again.jpg'
-  ),
+      imgUrls: 'https://www.sonypictures.com/sites/default/files/styles/max_560x840/public/chameleon/title-movie/321990_INSIDIOUS_1400x2100_Eng_1.jpg?itok=V9j1cNwW'),
   horrorData(
-      movie_name: 'Home Alone',
-      director_name: 'Chris Columbus',
+      movie_name: 'A Quiet Place',
+      director_name: 'John Krasinski',
       movie_duration: '1h 43m',
       wikiUrls: 'https://en.wikipedia.org/wiki/Home_Alone',
-      imdbUrls: 'https://www.imdb.com/title/tt0099785/',
-      movieRatings: 'IMDb rating: 7.7/10; Rotten tomatoes: 67%',
-      imgUrls: 'https://m.media-amazon.com/images/I/512QVB8ZTEL._AC_AC_SY350_QL15_.jpg'
+      imdbUrls: 'https://www.imdb.com/title/tt6644200/',
+      movieRatings: 'IMDb rating: 7.5/10; Rotten tomatoes: 96%',
+      imgUrls: 'https://upload.wikimedia.org/wikipedia/en/a/a0/A_Quiet_Place_film_poster.png'
   ),
   horrorData(
-      movie_name: "Baby's Day Out",
-      director_name: 'Patrick Read Johnson',
+      movie_name: "Sinister",
+      director_name: 'Scott Derrickson',
       movie_duration: '1h 39m',
-      wikiUrls: 'https://en.wikipedia.org/wiki/Baby%27s_Day_Out',
-      imdbUrls: 'https://www.imdb.com/title/tt0109190/',
-      movieRatings: 'IMDb rating: 7.9/10; Rotten tomatoes: 85%',
-      imgUrls: 'https://m.media-amazon.com/images/M/MV5BYWFiMGVhZjQtYzA2MC00YTMzLWIzOWYtNzIwN2M5MWQzNjc3XkEyXkFqcGdeQXVyMTQyMTMwOTk0._V1_.jpg'
-  ),
-  horrorData(
-      movie_name: 'The Hangover',
-      director_name: 'Todd Phillips',
-      movie_duration: '1h 36m',
-      wikiUrls: 'https://en.wikipedia.org/wiki/The_Hangover',
-      imdbUrls: 'https://www.imdb.com/title/tt1119646/',
-      movieRatings: 'IMDb rating: 7.9/10; Rotten tomatoes: 85%',
-      imgUrls: 'https://m.media-amazon.com/images/M/MV5BNGQwZjg5YmYtY2VkNC00NzliLTljYTctNzI5NmU3MjE2ODQzXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg'
+      wikiUrls: 'https://en.wikipedia.org/wiki/Sinister_(film)',
+      imdbUrls: 'https://www.imdb.com/title/tt1922777/',
+      movieRatings: 'IMDb rating: 6.8/10; Rotten tomatoes: 63%',
+      imgUrls: 'https://m.media-amazon.com/images/M/MV5BMjI5MTg1Njg0Ml5BMl5BanBnXkFtZTcwNzg2Mjc4Nw@@._V1_.jpg'
   ),
 ];
